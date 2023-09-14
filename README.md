@@ -45,7 +45,7 @@ conda activate sovits
 cd path/to/your/so-vits-svc-4.1-Stable
 ```
 
-**以下四行代码段是举例**，我在启动Anaconda Prompt之后，我的当前目录在
+**以下四个代码段是举例**，我在启动Anaconda Prompt之后，我的当前目录在
 
 ```shell
 (sovits) C:\Users\nia>
