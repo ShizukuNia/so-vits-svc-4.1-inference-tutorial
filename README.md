@@ -5,10 +5,14 @@
 在进行测试后，我们认为`Python 3.8.9`能够稳定地运行该项目  
 推荐使用conda创建虚拟环境来运行
 
+---------------------------
+
 ## Miniconda安装
 
 点击[这里](https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe)下载windows64版Miniconda  
 请务必选择add path
+
+---------------------------
 
 ## 创建一个Python 3.8虚拟环境
 
@@ -30,6 +34,8 @@ conda activate sovits
 (sovits) C:\Users\nia>
 ```
 
+---------------------------
+
 ## 进入so-vits-svc-4.1-Stable仓库地址
 
 在Anaconda Prompt里使用cd命令进入你的so-vits-svc-4.1-Stable仓库地址
@@ -38,7 +44,6 @@ conda activate sovits
 cd path/to/your/so-vits-svc-4.1-Stable
 ```
 
----------------------------
 举例，我在启动Anaconda Prompt之后，我的当前目录在
 
 ```shell
@@ -66,6 +71,8 @@ cd D:\Library\ShizukuLulu\Project_AIlulu\so-vits-svc-4.1-Stable
 
 注意，因为跨了磁盘，所以在使用cd命令前，要输入磁盘号+冒号先跳转到对应的磁盘
 
+---------------------------
+
 ## 安装requirements（运行代码所需的环境依赖）
 
 在Anacoda Prompt里复制粘贴以下代码并回车安装依赖
@@ -73,6 +80,8 @@ cd D:\Library\ShizukuLulu\Project_AIlulu\so-vits-svc-4.1-Stable
 ```shell
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
+
+---------------------------
 
 ## 模型&配置文件放置
 
@@ -88,6 +97,8 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 + contentvec ：[hubert_base.pt](https://huggingface.co/lj1995/VoiceConversionWebUI/resolve/main/hubert_base.pt)
   + 将文件名改为`checkpoint_best_legacy_500.pt`后，放在`pretrain`目录下
 
+---------------------------
+
 ### 训练好的模型和配置文件
 
 + 模型文件 `G_XXXXX.pth`
@@ -95,10 +106,14 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 + 配置文件 `config.json`
   + 放在`config`目录下
 
+---------------------------
+
 ### 推理的音频放置
 
 + 例：`test.wav`
   + 放在`raw`目录下
+
+---------------------------
 
 ## 🤖 推理
 
@@ -138,6 +153,8 @@ python inference_main.py -m "logs/44k/G_30000.pth" -c "configs/config.json" -n "
 + `-ks` | `--k_step`：扩散步数，越大越接近扩散模型的结果，默认 100
 + `-od` | `--only_diffusion`：纯扩散模式，该模式不会加载 sovits 模型，以扩散模型推理
 + `-se` | `--second_encoding`：二次编码，浅扩散前会对原始音频进行二次编码，玄学选项，有时候效果好，有时候效果差
+
+---------------------------
 
 ### 推理完成的结果位置
 
