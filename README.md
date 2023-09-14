@@ -97,8 +97,6 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 + contentvec ：[hubert_base.pt](https://huggingface.co/lj1995/VoiceConversionWebUI/resolve/main/hubert_base.pt)
   + 将文件名改为`checkpoint_best_legacy_500.pt`后，放在`pretrain`目录下
 
----------------------------
-
 ### 训练好的模型和配置文件
 
 + 模型文件 `G_XXXXX.pth`
@@ -106,14 +104,10 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 + 配置文件 `config.json`
   + 放在`config`目录下
 
----------------------------
-
 ### 推理的音频放置
 
 + 例：`test.wav`
   + 放在`raw`目录下
-
----------------------------
 
 ## 🤖 推理
 
